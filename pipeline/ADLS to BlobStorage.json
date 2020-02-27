@@ -1,5 +1,5 @@
 {
-	"name": "ADLS to Blob",
+	"name": "ADLS to BlobStorage",
 	"properties": {
 		"activities": [
 			{
