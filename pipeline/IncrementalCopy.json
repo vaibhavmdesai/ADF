@@ -78,7 +78,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "@SELECT * from dbo.data_source_table where LastModifiedTime >activity('LookupOldWatermarkValue').output and LastModifiedTime <=activity('LookupNewWatermarkValue').output",
+							"value": "@SELECT * from dbo.data_source_table where LastModifiedTime >activity('LookupOldWatermarkValue').output.firstRow.NewWatermarkValue and LastModifiedTime <=activity('LookupNewWatermarkValue').output.firstRoow.NewWatermarkValue",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00"
