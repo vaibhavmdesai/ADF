@@ -1,0 +1,36 @@
+{
+	"name": "DS_SQLDB_Source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "eid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ename",
+				"type": "varchar"
+			},
+			{
+				"name": "sal",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "deptno",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employee"
+		}
+	}
+}
