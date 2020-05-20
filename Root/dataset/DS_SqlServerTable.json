@@ -1,0 +1,39 @@
+{
+	"name": "DS_SqlServerTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Parameterized_SqlServer",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"LS_DBName": {
+					"value": "@dataset().DS_DBName",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"SourceSchema": {
+				"type": "String"
+			},
+			"TableName": {
+				"type": "String"
+			},
+			"DS_DBName": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().SourceSchema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().TableName",
+				"type": "Expression"
+			}
+		}
+	}
+}
